@@ -1,0 +1,4 @@
+# Optional. The updater runs on the standard library alone; PyYAML is only
+# needed if you want scripts/sources.yaml to be read. Without it the updater
+# falls back to its built-in defaults and prints a notice.
+PyYAML>=6.0

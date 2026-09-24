@@ -1,0 +1,116 @@
+# ---------------------------------------------------------------------------
+# sources.yaml — where every number in data/pricing.json comes from.
+#
+# `update_prices.py` reads this file. Each model row in the dataset is read
+# from GPTProto's public catalog, which publishes the upstream rate
+# ("official price") next to its own rate on the same page — so one fetch
+# yields a comparison baseline instead of a bare number.
+#
+# `vendors.<slug>.pricing_url` is the upstream provider page that the row's
+# `official_price_source_url` points at, so a reader can check the list price
+# against the vendor itself rather than against us.
+#
+# The `slug` keys are the vendor segment of the catalog URL
+# (https://gptproto.com/model/<slug>/<model>). Keep them in sync — a model
+# whose slug is missing here still gets published, it just keeps a null
+# `official_price_source_url`.
+#
+# `verified` is the date a human last confirmed the page resolves. A page that
+# answers 403 to a plain HTTP client (bot protection) is still listed, with a
+# note, because the rate is reproducible in a browser.
+# ---------------------------------------------------------------------------
+
+dataset:
+  name: llm-api-pricing
+  catalog_url: https://gptproto.com/model
+  sitemap_url: https://gptproto.com/sitemap-models.xml
+  model_list_api: https://gptproto.com/v1/models
+  llms_txt: https://gptproto.com/llms.txt
+  currency: USD
+  unit: per_1m_tokens
+
+vendors:
+  openai:
+    name: OpenAI
+    pricing_url: https://openai.com/api/pricing/
+    verified: 2026-09-24
+    note: answers 403 to plain HTTP clients; verify in a browser
+  claude:
+    name: Anthropic
+    pricing_url: https://www.anthropic.com/pricing
+    verified: 2026-09-24
+  google:
+    name: Google
+    pricing_url: https://ai.google.dev/gemini-api/docs/pricing
+    verified: 2026-09-24
+  grok:
+    name: xAI
+    pricing_url: https://docs.x.ai/docs/models
+    verified: 2026-09-24
+  qwen:
+    name: Alibaba Cloud Model Studio
+    pricing_url: https://www.alibabacloud.com/help/en/model-studio/models
+    verified: 2026-09-24
+  deepseek:
+    name: DeepSeek
+    pricing_url: https://api-docs.deepseek.com/quick_start/pricing
+    verified: 2026-09-24
+  moonshotai:
+    name: Moonshot AI
+    pricing_url: https://platform.moonshot.ai/docs/pricing/chat
+    verified: 2026-09-24
+  z-ai:
+    name: Z.ai
+    pricing_url: https://docs.z.ai/guides/overview/pricing
+    verified: 2026-09-24
+  minimax:
+    name: MiniMax
+    pricing_url: https://www.minimax.io/platform/document/pricing
+    verified: 2026-09-24
+  bytedance:
+    name: ByteDance
+    pricing_url: https://docs.byteplus.com/en/docs/ModelArk/1544106
+    verified: 2026-09-24
+  kling:
+    name: Kling AI
+    pricing_url: https://app.klingai.com/global/dev/document-api/apiReference/model/videoGeneration
+    verified: 2026-09-24
+  vidu:
+    name: Vidu
+    pricing_url: https://platform.vidu.com/docs/pricing
+    verified: 2026-09-24
+  hunyuan:
+    name: Tencent Hunyuan
+    pricing_url: https://cloud.tencent.com/document/product/1729/97731
+    verified: 2026-09-24
+  flux:
+    name: Black Forest Labs
+    pricing_url: https://bfl.ai/pricing
+    verified: 2026-09-24
+  ideogram:
+    name: Ideogram
+    pricing_url: https://ideogram.ai/pricing
+    verified: 2026-09-24
+    note: answers 403 to plain HTTP clients; verify in a browser
+  tripo3d:
+    name: Tripo3D
+    pricing_url: https://platform.tripo3d.ai/docs/pricing
+    verified: 2026-09-24
+  midjourney:
+    name: Midjourney
+    pricing_url: https://www.midjourney.com/plans
+    verified: 2026-09-24
+    note: subscription only — no public per-call API rate to compare against
+  higgsfield:
+    name: Higgsfield
+    pricing_url: https://higgsfield.ai/pricing
+    verified: 2026-09-24
+  typesafeai:
+    name: TypeSafeAI
+    pricing_url: https://typesafe.ai
+    verified: 2026-09-24
+    note: vendor does not publish a public rate card
+  gptproto:
+    name: GPTProto
+    pricing_url: https://gptproto.com/model
+    verified: 2026-09-24
