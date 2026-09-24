@@ -1,13 +1,13 @@
 {
-  "snapshot_date": "2026-09-24",
-  "generated_at": "2026-09-24T07:56:55Z",
+  "snapshot_date": "2026-09-25",
+  "generated_at": "2026-09-24T16:39:29Z",
   "currency": "USD",
   "unit": "per_1m_tokens",
   "source": "https://gptproto.com/model",
   "source_kind": "Published rates read from GPTProto's public model catalog, where the upstream list price and the GPTProto rate appear side by side. List prices are cross-checked against scripts/sources.yaml.",
   "counts": {
-    "total": 236,
-    "fetched": 236,
+    "total": 237,
+    "fetched": 237,
     "carried_over": 0,
     "skipped": 0
   },
@@ -1908,6 +1908,72 @@
       ],
       "description": "Lower-cost Claude Opus 5 API access at $4/$20 per 1M tokens. Build coding agents with 1M context, 128K output, vision, tools, and one key for 200+ models.",
       "source_url": "https://gptproto.com/model/claude/claude-opus-5",
+      "source_url_kind": "catalog_page",
+      "official_price_source_url": "https://www.anthropic.com/pricing"
+    },
+    {
+      "id": "claude-opus-5-5",
+      "provider": "anthropic",
+      "provider_name": "Anthropic",
+      "vendor_slug": "claude",
+      "modalities": [
+        "document",
+        "image",
+        "text",
+        "text_output"
+      ],
+      "context_window": 1000000,
+      "input_per_mtok_usd": 3.6,
+      "output_per_mtok_usd": 18.0,
+      "official_input_per_mtok_usd": 4.0,
+      "official_output_per_mtok_usd": 20.0,
+      "cache_write_per_mtok_usd": 4.5,
+      "cache_read_per_mtok_usd": 0.18,
+      "per_second_usd": null,
+      "per_image_usd": null,
+      "per_run_usd": null,
+      "media_rates": [],
+      "discount_percent": 10,
+      "billing_rows": [
+        {
+          "label": "Input / Output",
+          "discount_percent": 10,
+          "price_usd": 3.6,
+          "official_price_usd": 4.0,
+          "unit": "per_1m_tokens",
+          "unit_raw": "1M",
+          "slot": "input"
+        },
+        {
+          "label": "Input / Output",
+          "discount_percent": 10,
+          "price_usd": 18.0,
+          "official_price_usd": 20.0,
+          "unit": "per_1m_tokens",
+          "unit_raw": "1M",
+          "slot": "output"
+        },
+        {
+          "label": "Cache write",
+          "discount_percent": 10,
+          "price_usd": 4.5,
+          "official_price_usd": 5.0,
+          "unit": "per_1m_tokens",
+          "unit_raw": "1M",
+          "slot": "cache_write"
+        },
+        {
+          "label": "Cache read",
+          "discount_percent": 10,
+          "price_usd": 0.18,
+          "official_price_usd": 0.2,
+          "unit": "per_1m_tokens",
+          "unit_raw": "1M",
+          "slot": "cache_read"
+        }
+      ],
+      "description": "Use the Claude Opus 5.5 API on GPTProto for coding and long-running agents. Explore affordable access, model specs, migration checks, and live token pricing.",
+      "source_url": "https://gptproto.com/model/claude/claude-opus-5-5",
       "source_url_kind": "catalog_page",
       "official_price_source_url": "https://www.anthropic.com/pricing"
     },

@@ -26,6 +26,7 @@ claude-opus-4-7-thinking,anthropic,document|text|text_output,1000000,4.5,22.5,5.
 claude-opus-4-8,anthropic,document|text|text_output,1000000,4.5,22.5,5.0,25.0,5.625,0.45,,,,10,[],https://gptproto.com/model/claude/claude-opus-4-8,https://www.anthropic.com/pricing
 claude-opus-4-8-thinking,anthropic,document|text|text_output,1000000,4.5,22.5,5.0,25.0,5.625,0.45,,,,10,[],https://gptproto.com/model/claude/claude-opus-4-8-thinking,https://www.anthropic.com/pricing
 claude-opus-5,anthropic,document|image|text|text_output,1000000,4.5,22.5,5.0,25.0,5.625,0.45,,,,10,[],https://gptproto.com/model/claude/claude-opus-5,https://www.anthropic.com/pricing
+claude-opus-5-5,anthropic,document|image|text|text_output,1000000,3.6,18.0,4.0,20.0,4.5,0.18,,,,10,[],https://gptproto.com/model/claude/claude-opus-5-5,https://www.anthropic.com/pricing
 claude-sonnet-4-20250514,anthropic,document|text|text_output,200000,2.7,13.5,3.0,15.0,3.375,0.27,,,,10,[],https://gptproto.com/model/claude/claude-sonnet-4-20250514,https://www.anthropic.com/pricing
 claude-sonnet-4-20250514-thinking,anthropic,document|text|text_output,200000,2.7,13.5,3.0,15.0,3.375,0.27,,,,10,[],https://gptproto.com/model/claude/claude-sonnet-4-20250514-thinking,https://www.anthropic.com/pricing
 claude-sonnet-4-5-20250929,anthropic,document|text|text_output,1000000,2.7,13.5,3.0,15.0,3.375,0.27,,,,10,[],https://gptproto.com/model/claude/claude-sonnet-4-5-20250929,https://www.anthropic.com/pricing
