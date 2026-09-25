@@ -8,7 +8,7 @@ and every row carries the URL it was read from. If a number here doesn't match
 the page it cites, open an issue and it gets fixed.
 
 <!-- BEGIN GENERATED: snapshot -->
-> Last snapshot: **2026-09-25** · Currency: **USD**
+> Last snapshot: **2026-09-26** · Currency: **USD**
 > Models: **237** · Providers: **20** · With input and output rates: **133**
 <!-- END GENERATED: snapshot -->
 
